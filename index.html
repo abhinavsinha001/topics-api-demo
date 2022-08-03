@@ -9,7 +9,7 @@
 const topics = document.browsingTopics();
 
 // Request an ad creative.
-const response = await fetch('https://ads.example/get-creative', {
+const response = fetch('https://ads.example/get-creative', {
   method: 'POST',
   headers: {
     'Content-Type': 'application/json',
@@ -18,6 +18,6 @@ const response = await fetch('https://ads.example/get-creative', {
 })
 
 // Get the JSON from the response.
-const creative = await response.json();
+//const creative = await response.json();
 </script>
 </body>
