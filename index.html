@@ -1,2 +1,18 @@
 <h2> Topics API Demo <h2>
 <meta http-equiv="origin-trial" content="A5jY3yAsPeRP7TBmSkFZk2YTwDYSV81NQH4CXLf3HALgwXp7mUERWXSUh3EAU5CEUlz11jEdDBCq/9fSJW1WLwwAAACDeyJvcmlnaW4iOiJodHRwczovL3RvcGljcy1hcGkubWw6NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2MTI5OTE5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0=">
+
+<script>
+const topics = await document.browsingTopics();
+
+// Request an ad creative.
+const response = await fetch('https://ads.example/get-creative', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify(topics)
+})
+
+// Get the JSON from the response.
+const creative = await response.json();
+</script>
